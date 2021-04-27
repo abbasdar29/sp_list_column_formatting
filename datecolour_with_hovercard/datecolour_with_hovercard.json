@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "customCardProps": {
+    "formatter": {
+      "elmType": "div",
+      "txtContent": {
+        "operator": "?",
+        "operands": [
+          {
+            "operator": "<",
+            "operands": [
+              "@currentField",
+              1
+            ]
+          },
+          "",
+          {
+            "operator": "?",
+            "operands": [
+              {
+                "operator": "==",
+                "operands": [
+                  "[$Awarded_x0020_Supplier_x0020_]",
+                  ""
+                ]
+              },
+              "Ensure an Awarded Supplier is selected\n when marking a package as BBV Approved",
+              ""
+            ]
+          }
+        ]
+      }
+    },
+    "openOnEvent": "hover",
+    "directionalHint": "bottomCenter"
+  },
+  "style": {
+    "box-sizing": "border-box",
+    "padding": "0 2px",
+    "background-color": {
+      "operator": "?",
+      "operands": [
+        {
+          "operator": "<",
+          "operands": [
+            "@currentField",
+            1
+          ]
+        },
+        "",
+        {
+          "operator": "?",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "[$Awarded_x0020_Supplier_x0020_]",
+                ""
+              ]
+            },
+            "#FDDA8C",
+            ""
+          ]
+        }
+      ]
+    }
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "line-height": "16px",
+        "height": "14px",
+        "padding-left": "3px"
+      },
+      "attributes": {
+        "iconName": {
+          "operator": "?",
+          "operands": [
+            {
+              "operator": "<",
+              "operands": [
+                "@currentField",
+                1
+              ]
+            },
+            "",
+            {
+              "operator": "?",
+              "operands": [
+                {
+                  "operator": "==",
+                  "operands": [
+                    "[$Awarded_x0020_Supplier_x0020_]",
+                    ""
+                  ]
+                },
+                "Warning",
+                ""
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "elmType": "span",
+      "style": {
+        "overflow": "hidden",
+        "text-overflow": "ellipsis",
+        "padding": "0 3px"
+      },
+      "txtContent": "@currentField.displayValue"
+    }
+  ]
+}
