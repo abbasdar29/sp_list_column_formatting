@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "span",
+  "style": {
+    "text-decoration": "none"
+  },
+  "children": [
+    {
+      "elmType": "a",
+      "attributes": {
+        "iconName": {
+          "operator": "?",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "@currentField.title",
+                ""
+              ]
+            },
+            "",
+            "TeamsLogo"
+          ]
+        },
+        "target": "_blank",
+        "href": "='https://teams.microsoft.com/l/chat/0/0?users=' + join(@currentField.email,',') + '&topicName=' + [$Title]",
+        "class": "ms-fontColor-purple ms-fontColor-themeDark--hover",
+        "title": "='Start a chat with '+@currentField.title"
+      },
+      "style": {
+        "padding-right": "4px",
+        "font-size": "16px"
+      }
+    },
+    {
+      "elmType": "a",
+      "attributes": {
+        "iconName": {
+          "operator": "?",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "@currentField.title",
+                ""
+              ]
+            },
+            "",
+            "OutlookLogo"
+          ]
+        },
+        "class": "sp-field-quickActions ms-fontColor-blue ms-fontColor-themeDark--hover",
+        "title": "='Send an email to '+@currentField.title",
+        "href": {
+          "operator": "+",
+          "operands": [
+            "mailto:",
+            "@currentField.email",
+            "?subject=",
+            "=[$Title]+': '+[$Package_x0020_Name]",
+            "&body=Hi, can I get an update on this package?\r\n---\r\n",
+            "Click this link for more info. https://bbvjv.sharepoint.com/teams/Procurement/Lists/TES%252030%2520List/DispForm.aspx?ID=",
+            "[$ID]"
+          ]
+        }
+      },
+      "style": {
+        "padding-right": "8px",
+        "font-size": "16px"
+      }
+    },
+    {
+      "elmType": "div",
+      "txtContent": "@currentField.title"
+    }
+  ]
+}
