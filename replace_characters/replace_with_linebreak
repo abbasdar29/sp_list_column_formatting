@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": {
+    "operator": "replace",
+    "operands": [
+      "@currentField",
+      ";",
+      "\n"
+    ]
+  },
+  "style": {
+    "width": "100%",
+    "white-space": "wrap"
+  }
+}
